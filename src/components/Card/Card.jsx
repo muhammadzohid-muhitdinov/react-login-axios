@@ -31,7 +31,7 @@ const Card = (props) => {
       <p>{deslength(description)}</p>
       <span><Rate disabled defaultValue={rating.rate} /></span>
       <h1>{price}$</h1>
-      <Button icon={<ShoppingCartOutlined />}>Sotib olish</Button>
+      <Button icon={<ShoppingCartOutlined />}>Savatga</Button>
     </div>
   );
 };

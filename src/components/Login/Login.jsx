@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { message } from "antd";
 import fotom from "./uzuma.png"
 import logo from "./uzumlogo.png"
+
+
 const Login = () => {
   const navigate = useNavigate();
   const [messageApi, contextHolder] = message.useMessage();
@@ -11,14 +13,15 @@ const Login = () => {
   function SubmitHandler(e) {
     e.preventDefault();
     let [login, password] = e.target.elements;
-    if (login.value === MyInfo.login && password.value === MyInfo.passwrod) {
-      navigate("/home");
-    } else {
-      messageApi.open({
-        type: "error",
-        content: "Login yoki password Xato",
-      }
-      );
+
+    let finded = MyInfo.find((item)=>{
+      return item.login === login.value && item.passwrod === password.value
+    })
+
+    if(finded){
+      navigate("/home")
+    }else{
+      messageApi.error("Login yokki parol xato")
     }
   }
 
