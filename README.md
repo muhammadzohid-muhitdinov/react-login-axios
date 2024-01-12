@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 "# react-login-axios" 
 "# marketshoes" 
 "# muhammadzohid-muhitdinov.gihub.io" 
+"# muhammadzohid-muhitdinov.gihub.io" 
